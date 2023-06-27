@@ -11,5 +11,5 @@
     ]
   },
   {
-    "rewrites": [{ "source": "/server/src/(.*)", "destination": "/server/src" }]
+    "rewrites": [{ "source": "/src/(.*)", "destination": "/src" }]
   }
