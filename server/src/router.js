@@ -15,4 +15,9 @@ router.get('/todos', isLoggedIn, readTodosRoute);
 router.put('/todos/:id', isLoggedIn, updateTodoRoute);
 router.delete('/todos/:id', isLoggedIn, deleteTodoRoute);
 
+// Add the new route
+router.get('/', (req, res) => {
+	res.send('Hello, World!');
+});
+
 module.exports = router;
