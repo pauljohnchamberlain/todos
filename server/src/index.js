@@ -23,3 +23,5 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 	console.log('starting on port 8080');
 	app.listen(8080);
 });
+
+export default app;
