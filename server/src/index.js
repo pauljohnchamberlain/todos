@@ -20,8 +20,8 @@ mongoose.set('strictQuery', true);
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
 	console.log(process.env.MONGO_URI);
-	console.log('starting on port 8080');
-	app.listen(8080);
+	console.log('Server is running');
+	// app.listen(8080);
 });
 
 export default app;
