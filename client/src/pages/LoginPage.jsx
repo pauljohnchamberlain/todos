@@ -15,24 +15,26 @@ export const LoginPage = () => {
 			.then(({ token }) => {
 				setToken(token);
 				navigate('/');
+				console.log(token);
 			})
 			.catch((err) => {
 				setError(err.message);
+				console.log(err);
 			});
 	};
 
 	return (
 		<div>
-			<h1 className='text-3xl mb-5 text-purple-700'>Login</h1>
+			<h1 className='mb-5 text-3xl text-purple-700'>Login</h1>
 			<div style={{ color: 'red' }}>{error}</div>
 			<form onSubmit={handleLogin}>
 				<input
-					className='input input-bordered w-full max-w-xs text-black'
+					className='w-full max-w-xs text-black input input-bordered'
 					type='password'
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				<button className='btn btn-accent ml-5'>Login</button>
+				<button className='ml-5 btn btn-accent'>Login</button>
 			</form>
 		</div>
 	);
