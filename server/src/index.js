@@ -24,4 +24,4 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 	// app.listen(8080);
 });
 
-export default app;
+module.exports = app;
